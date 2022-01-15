@@ -8,15 +8,19 @@
     <meta name="description" content="Sample web page description goes here.">
 
 	<!-- Preload hero image -->
+    <link rel="preload" href="assets/videos/hero-still.jpg" as="image">
 
 
 	<!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/lunadoge.css" />
-    <link rel="stylesheet" href="assets/css/custom.css" />
-    <link rel="stylesheet" href="assets/css/lunadoge.min.css" />
+    <link rel="stylesheet" href="../assets/css/lunadoge.min.css" />
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+
 	<!-- Google Fonts -->
 
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fruktur&family=Mochiy+Pop+One&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
 	<!-- Font Awesome 5 icons -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
 
@@ -26,8 +30,7 @@
     <!-- Google Material Design Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
     rel="stylesheet">
- 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
 </head>
 
 
@@ -37,113 +40,120 @@
     <nav></nav>
 
     <!-- header hero block -->
-    <header>
-        <header class="hero-block text-center-desktop text-center-mobile">
-
-            <div class="hero-text-container">
-                <h1 class="text-shadow">Hi, i'm Eliabe</h1>
-                <h2 class="text-shadow">I am a web Designer who loves to build human-friendly interfaces></h2>
-            </div>
-        
-        
-                <div class="container-btn">
-                    <a href="portfolio/index.html" class="btn btn-primary"><span>View mY work</span><i class="far fa-file-code"></i></a>
-                    <a href="contact/index.html" class="btn btn-secondary"><span>Get in touch</span><i class="far fa-envelope"></i></a>
-                </div>
+    <header class="hero-block text-center-desktop text-center-mobile">
+        <div class="hero-text-container">
+            <h1>Portfolio</h1>
+            <h2>Eliabe Baliero</h2>	
+            <div class="container-btn">
+            <a href="../contact/index.html" class="btn btn-primary" class="bnt btn-primary"><span>Portfolio</span><i class="far fa-envelop"></i></a>
+         
             
-            <div class="hero-bg-media">
-                <img src="assets/img/pagehome.jpg" alt="Placeholder image">
-            </div>
-        
-            <div class="bg-overlay"></div>
-        
-        </header>
+        </div>
+            
+        </div>
+        <div class="hero-bg-media">
+            <img src="../assets/img/portfolio page.jpg" alt="website1 portfolio">
+        </div>
+        <div class="bg-overlay"></div>
     </header>
+    
+    
+    
+    
 
 
     <!-- main content with sections -->
     <main>
-        
-	<section class="container-flex theme-one">
-		<div class="col-1 text-center">
-			<h2>Recent projects</h2>
-			<h3>Below you can see some examples of my work. Check out my complet portfolio. <a href="portfolio/index.html">complete portfolio</a>.</h3>
-		</div>
 
-		<div class="col-3">
-			<figure><img src="assets/img/project-van-gogh.png" alt="vicent van project-van-gogh"></figure>
-			<h3>Vicent Van Gogh</h3>
-			<p>A summary of the life of Duch artist Vicent van Gogh with an embeded video from YouTube.</p>
-            <a href="portfolio/vicent-van-gogh/index.html" class="btn btn-primary btn-soft"><span>View project</span><i class="vicent van project-van-gogh"></i></a>
+       
+     
 
-		</div>
+        <section class="container-contact-form">
 
-		<div class="col-3">
-			<figure><img src="assets/img/project-fashion.jpg" alt="Placeholder image"></figure>
-			<h3>Snazzy fashion</h3>
-			<p>A web page for fashion retailer with a background video that plays in continuous loop.</p>
-            <a href="portfolio/fashion/fashion.html" class="btn btn-primary btn-soft"><span>View project</span><i class="Snazzy fashion project"></i></a>
-		</div>
+            <!-- Contact form starts here -->
+            <form id="contact-form" name="contact-form" accept-charset="utf-8" method="post" action="https://formspree.io/eliabemourabaloero@gmail.com">
 
-		<div class="col-3">
-			<figure><img src="assets/img/project-smoothie.jpg" alt="Placeholder image"></figure>
-			<h3>Smooth Smoothies</h3>
-			<p>A multi-column, flexbox-based page layout and hero image with a tinted overlay.</p>
-            <a href="portfolio/smoothies/smoothies.html" class="btn btn-primary btn-soft"><span>View project</span><i class="Smoothies Placeholder image"></i></a>
-		</div>
+                <div class="contact-form-upper text-center">
+                    <h2>Get in touch</h2>
+                    <p>Use the form below to let me know a little more about your objectives and i will get back to you.</p>
+                </div>
+
+                <!-- Begin contact form fields -->
+
+                <div class="flex-row">
+                    <div class="item-name">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" name="name" id="full-name" placeholder="Your First and Last Name." required="">
+                    </div>
+                    <div class="item-email">
+                        <label for="email-address">Email</label>
+                        <input type="email" name="_replyto" id="email-address" placeholder="Your Email Address." required="">
+                    </div>
+                </div>
+
+                <div class="flex-row">
+                    <div class="item-textarea">
+                        <label for="message">Message</label>
+                        <textarea rows="5" name="message" id="message" placeholder="Your Message." required=""></textarea>
+                    </div>
+
+                    <div class="item-btn">
+                        <button id="btn-submit" type="submit"><span>Send</span><i class="fas fa-arrow-circle-right"></i></button> 
+                    </div>
+                </div>
+
+                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                <!-- End contact form fields -->
+
+            </form><!-- Contact form ends here -->
+    </section><!-- End container for contact form -->
+       
+            
+
+
+
+
+
+
+
+
+
+
+  
+			
+			
+
+
+         
+			
+			
+		
 
     </main>
 
     
     <!-- footer -->
-    
-    
-	<footer>
+    <footer>
 
-		<h2>Eliabe web designer</h2>
+		<h2>|Eliabe Baliero</h2>
 
-		<h3>Excellence in digital creation</h3>
+		<h3>Exellence in digital creation</h3>
 
 		<ul class="footer-links">
-			<li><a href="#">Home</a></li>
-			<li><a href="portfolio/index.html">Link</a></li>
-			<li><a href="contact/index.html">Link</a></li>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../portfolio/index.html">Portfolio</a></li>
+			<li><a href="#">Contact</a></li>
 		</ul>
 
 		<ul class="footer-icons">
-			<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-			<li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-			<li><a href="#" target="_blank"><i class="fab fa-github-square"></i></a></li>
-			<li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
-			<li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+			<li><a href="https://fa-linkedin.com/nnnnn" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+			<li><a href="https://github.com/username" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+		
 		</ul>
 
-		<p class="index.html"> <a href="privacy/privacy.html">Privacy &amp; Legal</a> </p>
-      
-       
-	</footer>
-    
-       
+		<p class="privacy"><a href="../Privacy.html">Privacy &amp; Legal</a></p>
+
+	</footer>  
    
-    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "content": {
-    "href": "privacy/privacy.html"
-  }
-});
-</script>
-
-
-
-
 </body>
 </html>
